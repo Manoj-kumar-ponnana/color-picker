@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color-selector</title>
+    <link rel="stylesheet" href="cs.css">
+</head>
+<body>
+    <div class="main_container">
+        <div id="text_container">
+            <textarea id="main_input" type="text" aria-multiline="row" placeholder="Enter anything"></textarea>
+            <button id="reset_btn" onclick="myReset()">
+                Reset
+            </button>
+        </div>
+        <div id="selector_container">
+            <div id="selector_color_container">
+                <div id="bg_color_container">
+                    <p id="container_heading">
+                        Select BackGround Colour
+                    </p>
+                    <section id="color_holder">
+                        <div class="color_options" id="boxb1" style="background-color: red;" onclick="bgRed()"><span class="color_name">Red</span></div>
+                        <div class="color_options" id="boxb2" style="background-color:darkred;" onclick="bgDarkRed()"><span class="color_name">Dark Red</span></div>
+                        <div class="color_options" id="boxb3" style="background-color:darkorange;" onclick="bgOrange()"><span class="color_name">Orange</span></div>
+                        <div class="color_options" id="boxb4" style="background-color:cornflowerblue;" onclick="bgCNF()"><span class="color_name">Corn Flower Blue</span></div>
+                        <div class="color_options" id="boxb5" style="background-color:blue" onclick="bgBlue()"><span class="color_name">Blue</span></div>
+                        <div class="color_options" id="boxb6" style="background-color:aqua;" onclick="bgAqua()"><span class="color_name">Aqua</span></div>
+                        <div class="color_options" id="boxb7" style="background-color:darkcyan;" onclick="bgCyan()"><span class="color_name">Dark Cyan</span></div>
+                        <div class="color_options" id="boxb8" style="background-color:darkslateblue;" onclick="bgSlateBlue()"><span class="color_name">Dark Slate Blue</span></div>
+                        <div class="color_options" id="boxb9" style="background-color:blueviolet;" onclick="bgBV()"><span class="color_name">Blue Violet</span></div>
+                        <div class="color_options" id="boxb10" style="background-color:violet;" onclick="bgV()"><span class="color_name">Violet</span></div>
+                        <div class="color_options" id="boxb11" style="background-color:magenta" onclick="bgM()"><span class="color_name">Magenta</span></div>
+                        <div class="color_options" id="boxb12" style="background-color:lavender;" onclick="bgL()"><span class="color_name">Lavender</span></div>
+                        <div class="color_options" id="boxb13" style="background-color:pink;" onclick="bgP()"><span class="color_name">Pink</span></div>
+                        <div class="color_options" id="boxb14" style="background-color:hotpink;" onclick="bgHP()"><span class="color_name">Hot Pink</span></div>
+                        <div class="color_options" id="boxb15" style="background-color:green;" onclick="bgG()"><span class="color_name">Green</span></div>
+                        <div class="color_options" id="boxb16" style="background-color:greenyellow;" onclick="bgGY()"><span class="color_name">Green Yellow</span></div>
+                        <div class="color_options" id="boxb17" style="background-color:yellow;" onclick="bgY()"><span class="color_name">Yellow</span></div>
+                        <div class="color_options" id="boxb18" style="background-color:gold;" onclick="bgGld()"><span class="color_name">Gold</span></div>
+                        <div class="color_options" id="boxb19" style="background-color:khaki;" onclick="bgK()"><span class="color_name">Khaki</span></div>
+                        <div class="color_options" id="boxb20" style="background-color:gray;" onclick="bgGy()"><span class="color_name">Gray</span></div>
+                        <div class="color_options" id="boxb21" style="background-color:darkolivegreen;" onclick="bgOG()"><span class="color_name"> Dark Olive Green</span></div>
+                        <div class="color_options" id="boxb22" style="background-color:indigo;" onclick="bgI()"><span class="color_name">Indigo</span></div>
+                        <div class="color_options" id="boxb23" style="background-color:crimson;" onclick="bgCNF()"><span class="color_name">Crimson</span></div>
+                        <div class="color_options" id="boxb24" style="background-color:aliceblue;" onclick="bgCNF()"><span class="color_name">Alice Blue</span></div>
+                        <div class="color_options" id="boxb25" style="background-color:cadetblue;" onclick="bgCNF()"><span class="color_name">Cadet Blue</span></div>
+                        <div class="color_options" id="boxb26" style="background-color:lightgreen" onclick="bgCNF()"><span class="color_name">Light Green</span></div>
+                        <div class="color_options" id="boxb27" style="background-color:black" onclick="bgCNF()"><span class="color_name">Black</span></div>
+                        <div class="color_options" id="boxb28" style="background-color:white;" onclick="bgCNF()"><span class="color_name">White</span></div>
+                    </section>
+                    <div id='custom_color_div'>
+                        <label for="">custom color </label>
+                        <input type="color" name="" id="custom_color_1" value="#a8a8ff">
+                        <button onclick="customColor1()">done</button>
+                    </div>
+                    
+                </div>
+                <div id="font_color_container">
+                    <p id="container_heading">
+                        Select Font Colour
+                    </p>
+                    <div id="color_holder2" class="container2">
+                        <div class="color_options" id="boxf1" style="background-color: red;"><span class="color_name">Red</span></div>
+                        <div class="color_options" id="boxf2" style="background-color:darkred;"><span class="color_name">Dark Red</span></div>
+                        <div class="color_options" id="boxf3" style="background-color:darkorange;"><span class="color_name">Orange</span></div>
+                        <div class="color_options" id="boxf4" style="background-color:cornflowerblue;"><span class="color_name">Corn Flower Blue</span></div>
+                        <div class="color_options" id="boxf5" style="background-color:blue"><span class="color_name">Blue</span></div>
+                        <div class="color_options" id="boxf6" style="background-color:aqua;"><span class="color_name">Aqua</span></div>
+                        <div class="color_options" id="boxf7" style="background-color:darkcyan;"><span class="color_name">Dark Cyan</span></div>
+                        <div class="color_options" id="boxf8" style="background-color:darkslateblue;"><span class="color_name">Dark Slate Blue</span></div>
+                        <div class="color_options" id="boxf9" style="background-color:blueviolet;"><span class="color_name">Blue Violet</span></div>
+                        <div class="color_options" id="boxf10" style="background-color:violet;"><span class="color_name">Violet</span></div>
+                        <div class="color_options" id="boxf11" style="background-color:magenta"><span class="color_name">Magenta</span></div>
+                        <div class="color_options" id="boxf12" style="background-color:lavender;"><span class="color_name">Lavender</span></div>
+                        <div class="color_options" id="boxf13" style="background-color:pink;"><span class="color_name">Pink</span></div>
+                        <div class="color_options" id="boxf14" style="background-color:hotpink;"><span class="color_name">Hot Pink</span></div>
+                        <div class="color_options" id="boxf15" style="background-color:green;"><span class="color_name">Green</span></div>
+                        <div class="color_options" id="boxf16" style="background-color:greenyellow;"><span class="color_name">Green Yellow</span></div>
+                        <div class="color_options" id="boxf17" style="background-color:yellow;"><span class="color_name">Yellow</span></div>
+                        <div class="color_options" id="boxf18" style="background-color:gold;"><span class="color_name">Gold</span></div>
+                        <div class="color_options" id="boxf19" style="background-color:khaki;"><span class="color_name">Khaki</span></div>
+                        <div class="color_options" id="boxf20" style="background-color:gray;"><span class="color_name">Gray</span></div>
+                        <div class="color_options" id="boxf21" style="background-color:darkolivegreen;"><span class="color_name"> Dark Olive Green</span></div>
+                        <div class="color_options" id="boxf22" style="background-color:indigo;"><span class="color_name">Indigo</span></div>
+                        <div class="color_options" id="boxf23" style="background-color:crimson;"><span class="color_name">Crimson</span></div>
+                        <div class="color_options" id="boxf24" style="background-color:aliceblue;"><span class="color_name">Alice Blue</span></div>
+                        <div class="color_options" id="boxf25" style="background-color:cadetblue;"><span class="color_name">Cadet Blue</span></div>
+                        <div class="color_options" id="boxf26" style="background-color:lightgreen"><span class="color_name">Light Green</span></div>
+                        <div class="color_options" id="boxf27" style="background-color:black"><span class="color_name">Black</span></div>
+                        <div class="color_options" id="boxf28" style="background-color:white;"><span class="color_name">White</span></div>
+                    </div>
+                    <div id='custom_color_div'>
+                        <label for="">custom color </label>
+                        <input type="color" name="" id="custom_color_2" value="#a5ff85">
+                        <button onclick="customColor2()">done</button>
+                    </div>
+                </div>
+            </div>
+            <div id="selector_font_container">
+                <p id="container_heading">
+                    Select Font Style
+                </p>
+                <div id="fonts_holder">
+                    <div class="font_options" style="font-family: 'Courier New';">Font Style</div>
+                    <div class="font_options" style="font-family:'Franklin Gothic Medium'">Font Style</div>
+                    <div class="font_options" style="font-family:'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;">Font Style</div>
+                    <div class="font_options" style="font-family: 'Gill Sans MT';">Font Style</div>
+                    <div class="font_options" style="font-family:'Lucida Sans', 'Lucida Sans Regular';">Font Style</div>
+                    <div class="font_options" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Font Style</div>
+                    <div class="font_options" style="font-family:'Times New Roman', Times, serif;">Font Style</div>
+                    <div class="font_options" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Font Style</div>
+                    <div class="font_options" style="font-family: Arial, Helvetica, sans-serif;">Font Style</div>
+                    <div class="font_options" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Font Style</div>
+                    <div class="font_options" style="font-family:Georgia, 'Times New Roman', Times, serif;">Font Style</div>
+                    <div class="font_options" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Font Style</div>
+                    <div class="font_options" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Font Style</div>
+                    <div class="font_options" style="font-family:cursive ;">Font Style</div>
+                    <div class="font_options" style="font-family:monospace;">Font Style</div>
+                    <div class="font_options" style="font-family:sans-serif;">Font Style</div>
+                    <div class="font_options" style="font-family:serif ;">Font Style</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

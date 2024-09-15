@@ -1,0 +1,212 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.537);
+}
+.main_container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color:aliceblue;
+}
+#text_container{
+    width: 40%;
+    /* border: 1px solid black; */
+    padding: 1rem;
+    text-align: center;
+}
+#main_input{
+    width:98% ;
+    height: 90%;
+    font-size: 1.5rem;
+    resize: none;
+    font-family: inherit;
+    background-color: inherit;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+#selector_container{
+    width: 60%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+}
+#reset_btn{
+    font-size: 1.2rem;
+    padding: 0.3rem 1rem;
+}
+
+#selector_color_container{
+    height: 60%;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    column-gap: 1rem;
+}
+#bg_color_container{
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+#container_heading{
+    text-align: center;
+    width: 100%;
+    height: 5%;
+    padding: 0.5rem;
+    font-size: 1.15rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.24);
+}
+#color_holder, #color_holder2{
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 3rem;
+    padding: 2rem;
+    justify-content: center;
+    overflow: auto;
+    background-color:rgba(212, 219, 225, 0.574);
+    cursor:pointer;
+    transition: opacity 0.8s ease;
+}
+.color_options{
+    width: 4rem;
+    height: 4rem;
+    /* border: 1px solid white; */
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.24) ;
+}
+.color_options:hover .color_name{
+    visibility: visible;
+}
+.color_options:active{
+    transform: scale(0.9);
+    transition: 0.8s ease-out;
+}
+.color_holder:hover> .color_options:not(:hover), .color_holder2:hover> .color_options:not(:hover){
+    opacity: 0.4;
+}
+/* .color_holder :not(:has(div)){
+    opacity: 0.1;
+} */
+.color_name{
+    position: relative;
+    visibility: hidden;
+    top: 4.5rem;
+    background-color: rgba(255, 255, 255, 0.732);
+    padding: 0.3rem;
+    border-radius: 5px;
+    text-wrap: nowrap;
+    font-size: 0.7rem;
+    z-index: 1;
+}
+#custom_color_div{
+    padding: 1rem 0rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+#custom_color{
+    width: 5rem;
+}
+#done_btn{
+    background-color: inherit;
+}
+#font_color_container{
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+#selector_font_container{
+    height: 40%;
+    width: 100%;
+    padding: 1rem;
+}
+#fonts_holder{
+    height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    cursor: pointer;
+}
+.font_options{
+    padding: 1rem 2rem;
+    text-wrap: nowrap;
+    border: 1px solid rgba(0, 0, 0, 0.518);
+    border-radius: 8px;
+}
+.font_options:hover{
+    transform: scale(1.05);
+}
+.font_options:active{
+    background-color: rgb(181, 216, 247);
+}
+button{
+    padding: 0.3rem 0.8rem;
+    background-color: inherit;
+    border: 0.5px solid rgba(120, 120, 177, 0.564);
+    border-radius: 20px;
+    color: inherit;
+}
+button:hover{
+    transition: 0.5s;
+    box-shadow: 1px 1px 5px rgba(120, 120, 177, 0.564);
+    background-color: rgba(120, 120, 177, 0.564);
+}
+button:active{
+    background-color: rgb(120, 120, 177);
+}   
+
+@media  screen and (max-width:600px) {
+    .main_container{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+    }
+    #text_container{
+        height: 60%;
+        width: 100%;
+        flex-direction: row;
+        text-align: center;
+    }
+    #main_input{
+        justify-content: start;
+    }
+    #selector_container{
+        height: 60%;
+        width: 100%;
+        flex-direction: row;
+    }
+    #selector_color_container{
+        width: 100%;
+        flex-direction: row;
+        display: block;
+    }
+    
+    #main_input {
+        width: 85%;
+        height: 50vh;
+    }
+
+    .main_container {
+        display: block;
+        overflow-x: hidden;
+    }
+
+    #bg_color_container, #font_color_container {
+        width: 100%;
+        align-items: center;
+        text-align: -webkit-center !important;
+    }
+    #color_holder, #color_holder2{
+        height: 40vh;
+        width: 70vw;
+        overflow: auto;
+    }
+}
